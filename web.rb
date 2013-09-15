@@ -4,6 +4,6 @@ require 'twilio-ruby'
  
 get '/hello-monkey' do
   Twilio::TwiML::Response.new do |r|
-    r.Say :voice => "woman", :plain_text => "Hello Monkey"
+    r.Say :voice => "woman", :'plain text' => "Hello Monkey"
   end.text
 end
