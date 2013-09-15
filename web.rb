@@ -4,7 +4,7 @@ require 'twilio-ruby'
  
 get '/hello-monkey' do
   Twilio::TwiML::Response.new do |r|
-     r.Sms do |m|
+     r.Say do |m|
        m.body "ouchy ouchy ouchy"
     end
   end.text
