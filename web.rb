@@ -1,5 +1,8 @@
+require 'rubygems'
 require 'sinatra'
-
-get '/' do
-  "Hello, world"
-end
+require 'twilio-ruby'
+ 
+get '/hello-monkey' do
+  Twilio::TwiML::Response.new do |r|
+    r.Say 'Hello Monkey'
+  end.text
