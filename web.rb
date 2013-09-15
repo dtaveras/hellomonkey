@@ -3,6 +3,11 @@ require 'sinatra'
 require 'twilio-ruby'
  
 get '/hello-monkey' do
+    Twilio::TwiML::Response.new do |r|
+       r.Say "Hello Delvis youre the king"
+    end
+end.text
+
 =begin
   Twilio::TwiML::Response.new do |r|
      r.Say :voice => "woman" do |m|
@@ -10,7 +15,3 @@ get '/hello-monkey' do
     end
   end.text
 =end
-Twilio::TwiML::Response.new do |r|
-     r.Say "Hello Delvis youre the king"
-end
-end.text
