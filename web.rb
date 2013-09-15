@@ -7,6 +7,6 @@ get '/hello-monkey' do
      r.Say :voice => "woman" do |m|
        m.body "ouchy ouchy ouchy"
      end.txt
-  end.txt
+  end
 end
 
