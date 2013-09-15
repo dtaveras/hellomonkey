@@ -5,8 +5,8 @@ require 'twilio-ruby'
 get '/hello-monkey' do
     Twilio::TwiML::Response.new do |r|
        r.Say "Hello Delvis youre the king"
-    end
-end.text
+    end.text
+end
 
 =begin
   Twilio::TwiML::Response.new do |r|
